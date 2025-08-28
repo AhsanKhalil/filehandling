@@ -16,13 +16,6 @@ export default function Home() {
       });
   }, [load]);
 
-  useEffect(() => {
-    fetch("/api/images/s3")
-      .then((r) => r.json())
-      .then((data) => {
-        setGallerys3(data.items);
-      });
-  }, []);
 
   function handleUploadLocal(e) {
     e.preventDefault();
