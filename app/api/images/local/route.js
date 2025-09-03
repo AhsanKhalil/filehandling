@@ -24,9 +24,6 @@ export async function POST(req){
         const file = form.get("file")
         const type = file.type || ""
         
-        // if(!type.startsWith("image/")){
-        //     return Response.json({error: "Uploading Invalid Image"})
-        // }
         const bytes = await file.arrayBuffer()
         const buffer = Buffer.from(bytes)
 
